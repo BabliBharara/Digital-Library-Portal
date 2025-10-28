@@ -1,20 +1,20 @@
 # Digital-Library-Portal
 
- ## Project Description##
+ ## Project Description
 
 The Digital Library Portal is a web-based application designed to simplify access to academic resources and study materials for students. It allows users to browse, view, and download PDF files for different courses and semesters (like BCA, BBA, etc.) in a structured and organized way.
 This project demonstrates the integration of frontend and backend web technologies to create a practical and user-friendly learning platform.
 It’s also a valuable addition to a student’s portfolio, especially for BCA or computer science students, as it showcases skills in HTML, CSS, JavaScript, and web app structuring.
 
- ## Features##
+ ## Features
  Organized storage of course materials (by course and semester)
  Easy navigation and search through subject folders
  Downloadable PDF files
  Simple and responsive UI
  Lightweight and easy to deploy
 
- ## project structure##
-
+ ## project structure
+```
  Digital-Library-Portal/
 │
 ├── README.md                 # Project documentation for GitHub
@@ -64,9 +64,9 @@ It’s also a valuable addition to a student’s portfolio, especially for BCA o
 └── requirements.txt          # (Optional) List of Python dependencies
 
 
-## How to run##
+## How to run
 # 1. Clone the repository
-git clone https://github.com/<your-username>/Digital-Library-Portal.git
+git clone https://github.com/<BabliBharara>/Digital-Library-Portal.git
 
 # 2. Navigate into the project folder
 cd Digital-Library-Portal
