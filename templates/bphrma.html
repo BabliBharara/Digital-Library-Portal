@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPHARMA notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='ex.css') }}">
+
+</head>
+<body>
+    
+    
+        <header>
+    
+        <div class="searchbox">
+            <div class="logo">
+            
+            </div>
+            <select class="opp">
+                <option >All</option>
+            </select>
+
+            <input  type="text" id="input" name="query" placeholder="Search for title, author, course, publisher" >
+            <button type="submit"onclick="bca()" class="stb"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+        <div class="resultbox">
+        </div>
+    <script>
+  function bca() {
+    const input = document.getElementById('input').value.trim().toUpperCase();
+
+    switch (input) {
+      case "BCA":
+        window.location.href = "/bca";
+        break;
+      case "BTECH(CSE)":
+        window.location.href = "/btech";
+        break;
+      case "BBA":
+        window.location.href = "/bba";
+        break;
+      case "B.PHARMA":
+        window.location.href = "/bphrma";
+        break;
+      default:
+        alert("SORRY!!..no result found");
+    }
+  }
+</script>
+        <script>
+            let availablesearch=[
+    'Btech(cse)','BCA','B.Pharma','BBA',
+];
+const resultbox= document.querySelector(".resultbox");
+const input1=document.getElementById("input");
+input1.onkeyup=function()
+{
+    let result = [];
+    let inputs = input1.value;
+    if(inputs.length){
+        result=availablesearch.filter((keyword)=>{
+           return keyword.toLowerCase().includes(inputs.toLowerCase());
+        });
+        console.log(result);
+    }
+    display(result);
+
+    if(!result.length){
+        resultbox.innerHTML ='<p> no results</p>';
+    }
+}
+function display(result){
+    const content = result.map((list)=>{
+        return "<li onclick=selectInput(this)>" + list + "</li>";
+ });
+     resultbox.innerHTML = "<ul>" + content.join('') + "</ul>";
+}
+function selectInput(list){
+    input1.value = list.innerHTML;
+    resultbox.innerHTML ='';
+}
+    
+
+        </script>
+    <form>
+    <div class="taskbar">     
+       <a href="{{ url_for('work') }}"><button></button><i class="fa-solid fa-house"></i>Home</a></button>
+    <a href="{{ url_for('login') }}"><button><i class="fa-solid fa-user"></i>login</a></button>  
+    <button><i class="fa-solid fa-bars"></i>categories</button><br>
+    <button><i class="fa-solid fa-circle-info"></i>Information</button>
+
+    
+    </div>
+    
+    </form>
+    
+  <main>
+        
+        <div class="dropdown">
+            <div class="select">
+                <span class="selected">BPHARMA</span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu">
+            
+                <a href="bpharm1sem.html" ><button>1<sup>st</sup> SEM</button></a>
+               <a href="{{ url_for('bpharm2sem') }}"><button>2<sup>nd</sup> SEM</button></a>
+                    <button>3 <sup>rd</sup>SEM</button>
+                    <button>4 <sup>th</sup> SEM</button>
+                    <button>5 <sup>th</sup> SEM</button>
+                    <button>6 <sup>th</sup> SEM</button>
+                    <button>7 <sup>th</sup> SEM</button>
+                    <button>8 <sup>th</sup> SEM</button>
+            </ul>
+        </div>
+    </main>
+
+<div class="f">
+    <section class="content">
+        <h2><i class="fa-solid fa-layer-group"></i>Exam Hacker</h2>
+        <p><i class="fa-solid fa-circle-user"></i>credit to:
+            Aditya Saha,Anjali,Babli Bharara,Devraj.
+        </p>
+    </section>
+        <i class="fa-brands fa-wordpress"></i>created as : Project work<br>
+        <nav>
+          <section >
+  
+              <div class="icon">
+                  <button><i class="fa-brands fa-whatsapp"></i> </button>
+                  <button id="f"><i class="fa-brands fa-facebook"></i></button>
+                  <button id="t"><i class="fa-brands fa-twitter"></i></button>
+                  <button id="e"><i class="fa-solid fa-envelope"></i></button>
+              </div>
+  
+          
+          
+          </section>
+     <a href ="https://www.gehu.ac.in/">for Graphic Era Hill University ,Bhimtal..</a><br>
+    
+</body>
+</html>
+    
+</body>
+</html>

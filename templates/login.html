@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign in</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+
+</head>
+
+
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+   
+    <header>
+
+        <div class="logo img" >
+        <div class="logo">
+         
+
+      </div>
+    </div>
+      <div class="previous">
+       <a href="work.html"> <button> <i class="fa-sharp fa-solid fa-arrow-left"></i>previous</button></a>
+      </div>
+     
+    </header>
+
+    <main class="main">
+  <div class="login-container">
+<form action="{{ url_for('login') }}" method="POST">
+
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <p class="signup-link">Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
+    </form>
+  
+    </div>
+  </main>
+  <div class="f">
+    <section class="content">
+        <h2><i class="fa-solid fa-layer-group"></i>Exam Hacker</h2>
+        <p><i class="fa-solid fa-circle-user"></i>credit to:
+            Garima Bisht,Anjali,Babli Bharara,Devraj.
+        </p>
+    </section>
+        <i class="fa-brands fa-wordpress"></i>created as : Project work<br>
+        <nav>
+          <section >
+  
+              <div class="icon">
+                  <button><i class="fa-brands fa-whatsapp"></i> </button>
+                  <button id="f"><i class="fa-brands fa-facebook"></i></button>
+                  <button id="t"><i class="fa-brands fa-twitter"></i></button>
+                  <button id="e"><i class="fa-solid fa-envelope"></i></button>
+              </div>
+  
+          
+          
+          </section>
+     <a href ="https://www.gehu.ac.in/">for Graphic Era Hill University ,Bhimtal..</a><br>
+    
+</body>
+</html>
